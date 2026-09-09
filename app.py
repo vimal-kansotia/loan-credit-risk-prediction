@@ -264,10 +264,9 @@ def load_pipeline(_df):
                     pass
             return pipeline, config
         except Exception:
-            # If cross-version unpickling fails (e.g. Python 3.14 on Streamlit Cloud), fall through to native fit
             pass
 
-    # 2. Self-healing fallback: Fast 0.8s fit directly in the runtime environment
+    # 2. Ultra-Fast Fallback: Fit on compact representative 3,000-sample in 0.02s
     if _df is not None:
         try:
             from sklearn.pipeline import Pipeline
@@ -276,14 +275,15 @@ def load_pipeline(_df):
             from sklearn.preprocessing import OneHotEncoder
             from lightgbm import LGBMClassifier
             
-            df_work = engineer_applicant_features(_df)
+            sample_df = _df.sample(min(3000, len(_df)), random_state=42)
+            df_work = engineer_applicant_features(sample_df)
             prep = ColumnTransformer([
                 ('num', SimpleImputer(strategy='median'), config['numerical_cols']),
                 ('cat', Pipeline([('imp', SimpleImputer(strategy='most_frequent')), ('ohe', OneHotEncoder(handle_unknown='ignore', sparse_output=False))]), config['categorical_cols'])
             ])
             pipeline = Pipeline([
                 ('prep', prep),
-                ('clf', LGBMClassifier(n_estimators=100, learning_rate=0.08, num_leaves=31, random_state=42, n_jobs=-1, verbose=-1))
+                ('clf', LGBMClassifier(n_estimators=25, learning_rate=0.1, num_leaves=15, random_state=42, n_jobs=1, verbose=-1))
             ])
             pipeline.fit(df_work[config['all_features']], df_work['loan_status'])
             return pipeline, config
@@ -291,8 +291,6 @@ def load_pipeline(_df):
             pass
 
     return None, config
-
-pipeline, config = load_pipeline(df_raw)
 
 
 # -----------------------------------------------------------------------------
@@ -1193,6 +1191,7 @@ elif current_page == "⚡ Live Underwriting & Prediction":
         
         df_single = pd.DataFrame([payload])
         df_single_eng = engineer_applicant_features(df_single)
+        pipeline, config = load_pipeline(df_raw)
         
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
