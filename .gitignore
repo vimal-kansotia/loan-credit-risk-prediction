@@ -15,3 +15,4 @@ Thumbs.db
 archive_diabetes/
 scratch/
 *.log
+catboost_info/
