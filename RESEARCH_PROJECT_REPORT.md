@@ -1,10 +1,9 @@
-# SCHOOL OF DATA SCIENCE & BIG DATA ANALYTICS
-## M.Sc BIG DATA ANALYTICS
+# M.Sc BIG DATA ANALYTICS
 ### Research Project Report
 
 ---
 
-# 100,000-LOAN CREDIT RISK & DEFAULT PREDICTION SYSTEM USING CALIBRATED MACHINE LEARNING AND EXPLAINABLE AI
+# LOAN CREDIT RISK & DEFAULT PREDICTION SYSTEM USING MACHINE LEARNING
 
 **Domain:** Banking
 
@@ -17,7 +16,7 @@
 **Under the guidance of:**  
 **Prof. Ameya Chitnis**  
 
-**Academic Year:** September, 2026  
+**September, 2026**
 
 ---
 
@@ -25,7 +24,7 @@
 
 ## Certificate of Originality
 
-This is to certify that the project report entitled **"100,000-Loan Credit Risk & Default Prediction System Using Calibrated Machine Learning and Explainable AI"** submitted in partial fulfilment of the requirements for the degree of **M.Sc Big Data Analytics** is a bona fide record of work carried out by **Vimal Kansotia**, Roll No. / UID: **2509038**, under my supervision.
+This is to certify that the project report entitled **"Loan Credit Risk & Default Prediction System Using Machine Learning"** submitted in partial fulfilment of the requirements for the degree of **M.Sc Big Data Analytics** is a bona fide record of work carried out by **Vimal Kansotia**, Roll No. / UID: **2509038**, under my supervision.
 
 The work presented in this report is original and has not been submitted, in part or in full, for the award of any other degree or diploma of this or any other institution.
 

@@ -32,6 +32,7 @@ def create_report_docx():
     table_lines = []
     in_code = False
     code_lines = []
+    is_cover = True
 
     def style_table(table):
         table.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -117,6 +118,7 @@ def create_report_docx():
         # Handle page breaks
         if stripped == '\\newpage':
             doc.add_page_break()
+            is_cover = False
             i += 1
             continue
 
@@ -154,13 +156,33 @@ def create_report_docx():
         if stripped.startswith('# '):
             heading_text = stripped[2:].strip()
             h = doc.add_heading(level=1)
-            h.paragraph_format.space_before = Pt(14)
-            h.paragraph_format.space_after = Pt(5)
-            r = h.add_run(heading_text)
-            r.font.name = 'Calibri'
-            r.font.size = Pt(18)
-            r.font.bold = True
-            r.font.color.rgb = RGBColor(15, 23, 42)
+            if is_cover:
+                h.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                if "M.Sc" in heading_text:
+                    h.paragraph_format.space_before = Pt(30)
+                    h.paragraph_format.space_after = Pt(4)
+                    r = h.add_run(heading_text)
+                    r.font.name = 'Calibri'
+                    r.font.size = Pt(20)
+                    r.font.bold = True
+                    r.font.color.rgb = RGBColor(15, 23, 42)
+                else:
+                    h.paragraph_format.space_before = Pt(25)
+                    h.paragraph_format.space_after = Pt(15)
+                    r = h.add_run(heading_text)
+                    r.font.name = 'Calibri'
+                    r.font.size = Pt(21)
+                    r.font.bold = True
+                    r.font.color.rgb = RGBColor(30, 58, 138)
+            else:
+                h.paragraph_format.space_before = Pt(14)
+                h.paragraph_format.space_after = Pt(5)
+                r = h.add_run(heading_text)
+                r.font.name = 'Calibri'
+                r.font.size = Pt(18)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(15, 23, 42)
+
         elif stripped.startswith('## '):
             heading_text = stripped[3:].strip()
             h = doc.add_heading(level=2)
@@ -171,16 +193,28 @@ def create_report_docx():
             r.font.size = Pt(14)
             r.font.bold = True
             r.font.color.rgb = RGBColor(30, 58, 138)
+
         elif stripped.startswith('### '):
             heading_text = stripped[4:].strip()
             h = doc.add_heading(level=3)
-            h.paragraph_format.space_before = Pt(10)
-            h.paragraph_format.space_after = Pt(3)
-            r = h.add_run(heading_text)
-            r.font.name = 'Calibri'
-            r.font.size = Pt(12)
-            r.font.bold = True
-            r.font.color.rgb = RGBColor(51, 65, 85)
+            if is_cover:
+                h.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                h.paragraph_format.space_before = Pt(2)
+                h.paragraph_format.space_after = Pt(25)
+                r = h.add_run(heading_text.upper())
+                r.font.name = 'Calibri'
+                r.font.size = Pt(13)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(71, 85, 105)
+            else:
+                h.paragraph_format.space_before = Pt(10)
+                h.paragraph_format.space_after = Pt(3)
+                r = h.add_run(heading_text)
+                r.font.name = 'Calibri'
+                r.font.size = Pt(12)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(51, 65, 85)
+
         elif stripped.startswith('#### '):
             heading_text = stripped[5:].strip()
             h = doc.add_heading(level=4)
@@ -191,6 +225,7 @@ def create_report_docx():
             r.font.size = Pt(11)
             r.font.bold = True
             r.font.color.rgb = RGBColor(71, 85, 105)
+
         elif stripped.startswith('* ') or stripped.startswith('- '):
             p = doc.add_paragraph(style='List Bullet')
             p.paragraph_format.space_after = Pt(3)
@@ -201,10 +236,16 @@ def create_report_docx():
                 r = p.add_run(part)
                 if idx % 2 == 1:
                     r.font.bold = True
+
         elif stripped:
             p = doc.add_paragraph()
-            p.paragraph_format.space_after = Pt(5)
-            p.paragraph_format.line_spacing = 1.15
+            if is_cover:
+                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                p.paragraph_format.space_after = Pt(8)
+                p.paragraph_format.line_spacing = 1.2
+            else:
+                p.paragraph_format.space_after = Pt(5)
+                p.paragraph_format.line_spacing = 1.15
             parts = stripped.split('**')
             for idx, part in enumerate(parts):
                 r = p.add_run(part)
@@ -218,7 +259,7 @@ def create_report_docx():
 
     output_path = 'RESEARCH_PROJECT_REPORT.docx'
     doc.save(output_path)
-    print(f'{output_path} generated successfully with all embedded figures!')
+    print(f'{output_path} generated successfully with centered cover and embedded figures!')
 
 if __name__ == '__main__':
     create_report_docx()
