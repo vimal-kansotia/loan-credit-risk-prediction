@@ -15,7 +15,7 @@
 **Roll No. / UID:** 2509038  
 
 **Under the guidance of:**  
-**Prof. Amit Chitnis**  
+**Prof. Ameya Chitnis**  
 
 **Academic Year:** September, 2026  
 
@@ -37,7 +37,7 @@ The work presented in this report is original and has not been submitted, in par
 \vspace{2cm}
 
 ______________________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ______________________________________  
-**Vimal Kansotia** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Prof. Amit Chitnis**  
+**Vimal Kansotia** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Prof. Ameya Chitnis**  
 *(Student Signature)* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *(Faculty Research Advisor)*  
 
 ---
@@ -46,7 +46,7 @@ ______________________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 
 ## Acknowledgement
 
-I express my deepest gratitude to my faculty research guide, **Prof. Amit Chitnis**, for his invaluable guidance, continuous intellectual mentorship, and critical technical feedback throughout this research project. His domain expertise in financial econometrics and rigorous machine learning methodologies was instrumental in framing the credit risk underwriting architecture and ensuring a leakage-free experimental design.
+I express my deepest gratitude to my faculty research guide, **Prof. Ameya Chitnis**, for his invaluable guidance, continuous intellectual mentorship, and critical technical feedback throughout this research project. His domain expertise in financial econometrics and rigorous machine learning methodologies was instrumental in framing the credit risk underwriting architecture and ensuring a leakage-free experimental design.
 
 I would also like to thank the faculty members, laboratory staff, and the Department of Big Data Analytics for providing the computational infrastructure, academic support, and encouragement necessary to complete this research. Lastly, I extend my appreciation to the open-source community behind Scikit-Learn, LightGBM, SHAP, and Streamlit for developing the analytical tools that powered this end-to-end institutional underwriting system.
 

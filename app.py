@@ -6,7 +6,7 @@ RESEARCH PROJECT (RP) DASHBOARD
 Candidate Name:   Vimal Kansotia
 Student UID:      2509038
 Degree / School:  MSc Big Data Analytics
-Faculty Advisor:  Prof. Amit Chitnis
+Faculty Advisor:  Prof. Ameya Chitnis
 Institution:      School of Computer Science & Data Science | Research Project (RP)
 ====================================================================================================
 """
@@ -325,7 +325,7 @@ with st.sidebar:
     <div class="capsule-badge-sidebar capsule-amber">
         <span style="font-size: 1.35rem; flex-shrink: 0;">👨‍🏫</span>
         <div>
-            <div class="capsule-badge-text-title">Prof. Amit Chitnis</div>
+            <div class="capsule-badge-text-title">Prof. Ameya Chitnis</div>
             <div class="capsule-badge-text-sub">Faculty Research Advisor</div>
         </div>
     </div>
@@ -370,7 +370,7 @@ if current_page == "📊 Executive Overview":
         </h1>
         <p style="margin: 0; color: #94a3b8; font-size: 1.02rem; line-height: 1.5;">
             Master's research project for <strong>MSc Big Data Analytics</strong> by <strong>Vimal Kansotia (UID: 2509038)</strong>, 
-            supervised by <strong>Prof. Amit Chitnis</strong>. Engineered across 100,000 institutional lending records and 26 variables 
+            supervised by <strong>Prof. Ameya Chitnis</strong>. Engineered across 100,000 institutional lending records and 26 variables 
             to predict default likelihood with zero data leakage and calibrated Explainable AI.
         </p>
     </div>
@@ -1360,7 +1360,7 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #64748b; font-size: 0.85rem; padding: 10px 0;">
     Candidate: <strong>Vimal Kansotia</strong> (UID: <code>2509038</code>) | 
-    Program: <strong>MSc Big Data Analytics</strong> | Advisor: <strong>Prof. Amit Chitnis</strong><br>
+    Program: <strong>MSc Big Data Analytics</strong> | Advisor: <strong>Prof. Ameya Chitnis</strong><br>
     Loan Credit Risk AI System • 100,000 Loans • LightGBM (94.11% ROC-AUC)
 </div>
 """, unsafe_allow_html=True)

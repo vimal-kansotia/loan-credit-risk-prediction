@@ -3,7 +3,7 @@
 
 **Candidate:** Vimal Kansotia (UID: `2509038`)  
 **Program / Degree:** MSc Big Data Analytics  
-**Faculty Advisor:** Prof. Amit Chitnis  
+**Faculty Advisor:** Prof. Ameya Chitnis  
 **Course:** Research Project (RP) - Financial Machine Learning  
 
 ---
@@ -58,7 +58,7 @@ python3 -m streamlit run app.py
 Then navigate to **`http://localhost:8501`** in your browser.
 
 **Features of the Streamlit App:**
-1. **Capsule Navigation & Academic Branding:** Capsule pills navigation bar, displaying candidate profile (`Vimal Kansotia`, `UID: 2509038`, `MSc Big Data Analytics`, `Prof. Amit Chitnis`).
+1. **Capsule Navigation & Academic Branding:** Capsule pills navigation bar, displaying candidate profile (`Vimal Kansotia`, `UID: 2509038`, `MSc Big Data Analytics`, `Prof. Ameya Chitnis`).
 2. **Executive Overview:** High-level project KPIs, 8-stage methodology cards, and portfolio distribution.
 3. **Exploratory Data Analysis:** Real-time slicers for loan grade, term, ownership, and FICO; interactive Plotly charts.
 4. **Enriched Model Benchmark & Evaluation (8+ Plots):**
