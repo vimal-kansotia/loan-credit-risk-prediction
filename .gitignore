@@ -16,3 +16,4 @@ archive_diabetes/
 scratch/
 *.log
 catboost_info/
+.local_backup/
