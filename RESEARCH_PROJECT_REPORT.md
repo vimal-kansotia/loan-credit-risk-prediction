@@ -120,6 +120,7 @@ I would also like to thank the faculty members, laboratory staff, and the Depart
 - 10.4 Calibration .................................................................................... 27
 - 10.5 Overfitting Diagnostics ......................................................................... 28
 - 10.6 Stability Analysis (PSI / CSI) ................................................................. 28
+- 10.7 Explainable AI (XAI) & SHAP TreeExplainer ...................................................... 29
 
 ### Chapter 11: Business Impact & Recommendations
 - 11.1 Score-to-Action Mapping ....................................................................... 29
@@ -281,6 +282,10 @@ The target variable exhibits moderate class imbalance representative of commerci
 
 Because class imbalance is moderate rather than extreme (unlike credit card fraud with <0.1% positive rates), synthetic minority oversampling (SMOTE) was found to distort local decision boundaries. Instead, stratified cross-validation and cost-calibrated decision threshold optimization were implemented to prioritize default detection without perturbing true posterior probabilities.
 
+![Figure 1: Target Variable Class Balance](figures/fig1_class_balance.png)
+
+*Figure 1: Distribution of loan repayment status across 100,000 institutional records (64.36% Fully Paid vs. 35.64% Default).*
+
 ---
 
 \newpage
@@ -292,6 +297,10 @@ Univariate distributions revealed significant positive skewness across borrower 
 * **Loan Amount (`loan_amnt`):** Mean = \$15,958 (Median = \$14,000; Std = \$9,120). Displays strong clustering at conventional commercial denominations (\$10,000, \$15,000, \$20,000, and \$35,000).
 * **Annual Income (`annual_inc`):** Highly right-skewed with a median of \$65,000. Values exceeding \$250,000 represented top-percentile earners; a log-transformation $\ln(1 + \text{annual\_inc})$ was engineered for linear models.
 * **Interest Rate (`int_rate`):** Bell-shaped distribution spanning 5.32% to 30.99% with a mean of 14.82%. Higher interest rates strongly correlate with subsequent default.
+
+![Figure 2: Distribution of Borrower Annual Income and Loan Amounts](figures/fig2_income_loan_distributions.png)
+
+*Figure 2: Empirical distributions of applicant verified annual income and requested loan amounts.*
 
 ### 3.2 Bivariate Analysis
 Bivariate evaluations quantified strong directional relationships between credit predictors and loan failure rates:
@@ -305,11 +314,23 @@ Bivariate evaluations quantified strong directional relationships between credit
 2. **FICO Score vs. Loan Status:** Solvent borrowers exhibit a median FICO score of 715, whereas defaulting borrowers demonstrate a median of 672. Borrowers with FICO scores below 660 exhibit nearly three times the baseline default rate.
 3. **Debt-to-Income (DTI) vs. Default:** Defaulters exhibit significantly higher median DTI (21.4%) compared to non-defaulters (16.2%), confirming that monthly obligations limit repayment capacity during adverse liquidity shocks.
 
+![Figure 3: Default Rate Escalation Across Credit Rating Grades](figures/fig3_grade_default_escalation.png)
+
+*Figure 3: Exponential default rate escalation observed across credit rating grades B through G.*
+
+![Figure 4: FICO Score Distribution Stratified by Loan Repayment Outcome](figures/fig4_fico_vs_default.png)
+
+*Figure 4: Kernel density estimates (KDE) of borrower credit bureau FICO scores stratified by repayment status.*
+
 ### 3.3 Multivariate Analysis
 A Pearson correlation matrix of continuous features revealed key multi-variable relationships:
 * `loan_amnt` and `installment` exhibit near-perfect collinearity ($r = 0.95$). While tree ensembles easily handle correlated inputs, derived non-linear interaction ratios were engineered to decouple absolute magnitude from debt-servicing strain.
 * `fico_range_low` and `fico_range_high` exhibit collinearity ($r = 1.00$). They were consolidated into a single unified predictor: `fico_avg = (fico_range_low + fico_range_high) / 2`.
 * `int_rate` and `grade` share strong correlation ($r = 0.74$), reflecting credit risk tiering.
+
+![Figure 5: Feature Correlation Heatmap Across Core Credit Predictors](figures/fig5_correlation_heatmap.png)
+
+*Figure 5: Pearson correlation matrix across numerical borrower financial and credit history variables.*
 
 ### 3.4 Key Insights Summary
 1. **Graded Credit Stratification:** Credit grades B–D represent high-volume prime credit, while grades E–G exhibit severe default risk (>24% to 84%).
@@ -353,25 +374,46 @@ A primary key deduplication scan across all 26 feature attributes identified **0
 
 ### 5.1 Derived Features
 Domain expertise was leveraged to formulate 6 new interaction and financial burden indicators:
-1. **`installment_to_inc`:** Monthly payment burden relative to monthly income:
-   $$\text{installment\_to\_inc} = \frac{\text{installment} \times 12}{\text{annual\_inc} + 1}$$
-   *Hypothesis:* High debt-servicing strain leaves zero cushion for unexpected financial shocks.
-2. **`loan_to_inc`:** Total requested principal relative to verified annual income:
-   $$\text{loan\_to\_inc} = \frac{\text{loan\_amnt}}{\text{annual\_inc} + 1}$$
-   *Hypothesis:* Borrowers requesting loans exceeding 40% of their annual salary carry substantially higher default rates.
-3. **`interest_burden_annual`:** Annual gross interest cost borne by the borrower:
-   $$\text{interest\_burden\_annual} = \text{loan\_amnt} \times \left(\frac{\text{int\_rate}}{100}\right)$$
-   *Hypothesis:* Absolute compounding interest load drives borrower delinquency.
-4. **`high_util_flag`:** Binary indicator identifying revolving utilization $> 75\%$:
-   $$\text{high\_util\_flag} = \mathbb{I}(\text{revol\_util} > 75.0)$$
-5. **`derogatory_flag`:** Indicator of past credit trauma:
-   $$\text{derogatory\_flag} = \mathbb{I}(\text{delinq\_2yrs} > 0 \lor \text{pub\_rec} > 0)$$
-6. **`revol_to_inc`:** Total revolving credit balance relative to annual income:
-   $$\text{revol\_to\_inc} = \frac{\text{revol\_bal}}{\text{annual\_inc} + 1}$$
+
+1. **`installment_to_inc` (Monthly Debt Service Burden):**
+   * **Implementation Formula:** `installment_to_inc = (installment * 12.0) / (annual_inc + 1.0)`
+   * **Mathematical Formulation:**
+     $$\text{Installment-to-Income} = \frac{\text{Monthly Installment} \times 12}{\text{Annual Income} + 1}$$
+   * *Underwriting Hypothesis:* High debt-servicing strain leaves zero liquidity cushion for unforeseen financial shocks.
+
+2. **`loan_to_inc` (Total Leverage Exposure):**
+   * **Implementation Formula:** `loan_to_inc = loan_amnt / (annual_inc + 1.0)`
+   * **Mathematical Formulation:**
+     $$\text{Loan-to-Income} = \frac{\text{Loan Principal Requested}}{\text{Annual Income} + 1}$$
+   * *Underwriting Hypothesis:* Borrowers requesting loans exceeding 40% of their annual salary carry substantially higher default hazard rates.
+
+3. **`interest_burden_annual` (Gross Annual Interest Cost):**
+   * **Implementation Formula:** `interest_burden_annual = loan_amnt * (int_rate / 100.0)`
+   * **Mathematical Formulation:**
+     $$\text{Annual Interest Burden} = \text{Loan Amount} \times \left(\frac{\text{Interest Rate}}{100}\right)$$
+   * *Underwriting Hypothesis:* High compounding interest carry accelerates credit deterioration and borrower delinquency.
+
+4. **`high_util_flag` (Revolving Line Stress Indicator):**
+   * **Implementation Formula:** `high_util_flag = 1 if revol_util > 75.0 else 0`
+   * **Mathematical Formulation:**
+     $$\text{High Utilization Flag} = \begin{cases} 1 & \text{if Revolving Line Utilization} > 75\% \\ 0 & \text{otherwise} \end{cases}$$
+   * *Underwriting Hypothesis:* Maxed-out revolving credit limits indicate acute personal liquidity distress.
+
+5. **`derogatory_flag` (Prior Credit Bureau Delinquency):**
+   * **Implementation Formula:** `derogatory_flag = 1 if (delinq_2yrs > 0 or pub_rec > 0) else 0`
+   * **Mathematical Formulation:**
+     $$\text{Derogatory Flag} = \begin{cases} 1 & \text{if 30+ Days Delinquencies} > 0 \text{ or Public Derogatory Records} > 0 \\ 0 & \text{otherwise} \end{cases}$$
+   * *Underwriting Hypothesis:* Borrowers with historical delinquencies or bankruptcies display higher recurrence of default.
+
+6. **`revol_to_inc` (Revolving Balance Leverage):**
+   * **Implementation Formula:** `revol_to_inc = revol_bal / (annual_inc + 1.0)`
+   * **Mathematical Formulation:**
+     $$\text{Revolving-to-Income} = \frac{\text{Total Revolving Balance}}{\text{Annual Income} + 1}$$
+   * *Underwriting Hypothesis:* High revolving debt relative to annual earnings impairs long-term debt-servicing capacity.
 
 ### 5.2 Transformations
-* **Logarithmic Transformation:** Applied to annual income ($\ln(1 + \text{annual\_inc})$) to stabilize variance.
-* **FICO Consolidation:** Consolidated `fico_range_low` and `fico_range_high` into a single mid-point metric `fico_avg`.
+* **Logarithmic Transformation:** Applied to annual income (`np.log1p(annual_inc)`) to stabilize variance and compress long-tailed earnings distributions.
+* **FICO Consolidation:** Consolidated `fico_range_low` and `fico_range_high` into a single mid-point metric `fico_avg = (fico_range_low + fico_range_high) / 2.0`.
 
 ### 5.3 Encoding Strategy
 * **One-Hot Encoding:** Applied to nominal categorical variables with low to medium cardinality: `term` (2 levels), `home_ownership` (4 levels), `verification_status` (3 levels), and `purpose` (7 levels). Handled via `OneHotEncoder(handle_unknown='ignore', sparse_output=False)`.
@@ -453,6 +495,10 @@ categorical_transformer = Pipeline(steps=[
 ])
 ```
 * Transformers were fitted exclusively on the 80,000 training records.
+
+![Figure 6: Multi-Stage Machine Learning Pipeline Architecture](figures/fig6_pipeline_architecture.png)
+
+*Figure 6: Leak-free ColumnTransformer and LightGBM production pipeline architecture.*
 * Out-of-fold validation and test sets were transformed using training parameters.
 
 ### 7.3 Handling Class Imbalance
@@ -500,6 +546,10 @@ Six diverse classification architectures were trained and benchmarked under iden
 * **Academic Benchmark Compliance:** Delivers 86.74% accuracy, strictly within the institutional 85%–90% target band.
 * **Low Memory Footprint:** Serialized model footprint is only 538 KB.
 
+![Figure 7: Comparative ROC Curves Across 6 Benchmarked Model Architectures](figures/fig7_roc_curves.png)
+
+*Figure 7: Comparative Receiver Operating Characteristic (ROC) curves across 6 evaluated classification models.*
+
 ---
 
 \newpage
@@ -545,6 +595,14 @@ Under standard symmetrical cutoff ($\tau = 0.50$), LightGBM achieves high accura
 | **F1-Score (Default Class)** | 0.8098 | **0.8168** | **+0.0070 (Optimal balance achieved)** |
 | **Specificity (Non-Default)** | 90.84% | **86.02%** | Correctly approves 11,068 of 12,872 safe borrowers |
 
+![Figure 8: Precision-Recall Curve of the Calibrated Production Pipeline](figures/fig8_pr_curve.png)
+
+*Figure 8: Precision-Recall curve illustrating the calibrated operating threshold (tau = 0.36) achieving 86.50% recall at 77.36% precision.*
+
+![Figure 9: Confusion Matrix at the Calibrated Operating Cutoff](figures/fig9_confusion_matrix.png)
+
+*Figure 9: Confusion matrix on 20,000 holdout test loans at the calibrated operating threshold (tau = 0.36).*
+
 ### 10.2 Discrimination Metrics
 
 **Table 8: Discrimination and Diagnostic Metrics Summary**
@@ -576,8 +634,16 @@ Under standard symmetrical cutoff ($\tau = 0.50$), LightGBM achieves high accura
 
 *Interpretation:* Ranking loans by predicted default probability concentrates **70.17% of all defaults in the top 3 deciles** (top 30% of risk-scored applications), achieving a **2.34x lift** over random selection.
 
+![Figure 10: Cumulative Lift and Gain Curves Across Test Deciles](figures/fig10_lift_gain_curve.png)
+
+*Figure 10: Cumulative gain and decile lift charts demonstrating 70.17% default concentration in the top 3 risk deciles.*
+
 ### 10.4 Calibration
 Model calibration was audited via reliability diagrams. The LightGBM predicted default probabilities track empirical observed default frequencies closely (Brier score = **0.0894**). Predicted risk probabilities represent true posterior default likelihoods without requiring post-hoc isotonic or Platt scaling.
+
+![Figure 11: Model Calibration Curve](figures/fig11_calibration_curve.png)
+
+*Figure 11: Calibration reliability diagram comparing predicted default probabilities against observed empirical frequencies (Brier Score = 0.0894).*
 
 ### 10.5 Overfitting Diagnostics
 
@@ -594,6 +660,16 @@ LightGBM demonstrates a narrow 1.31% generalization gap between training and tes
 
 ### 10.6 Stability Analysis (PSI / CSI)
 Population Stability Index (PSI) was evaluated by partitioning the holdout dataset across simulated origination quarters. The model achieved a score-level **PSI of 0.031**, well below the regulatory stability threshold of **0.10**. Characteristic Stability Index (CSI) across key drivers (`dti`, `fico_avg`, `int_rate`) remained below 0.045, confirming predictive stability across changing applicant demographics.
+
+### 10.7 Explainable AI (XAI) & SHAP TreeExplainer
+To satisfy regulatory compliance under the Fair Credit Reporting Act (FCRA) and Equal Credit Opportunity Act (ECOA), the production pipeline integrates the **SHAP (SHapley Additive exPlanations) TreeExplainer** framework. Shapley values allocate fair, additive contributions to each input feature:
+
+![Figure 12: SHAP Global Feature Importance](figures/fig12_shap_importance.png)
+
+*Figure 12: Global SHAP feature attribution ranking the top 12 drivers of credit default risk.*
+
+* **Key Attribution Drivers:** Loan credit grade and sub-grade contribute the largest absolute shift in log-odds default risk, followed closely by loan interest rate, average FICO score, and the engineered `installment_to_inc` and `interest_burden_annual` ratios.
+* **Regulatory Compliance:** For every rejected loan application ($\hat{p} \ge 0.36$), the real-time inference engine extracts the top three adverse feature contributors to automatically formulate legally mandated Adverse Action Notices.
 
 ---
 
@@ -616,10 +692,14 @@ To operationalize the risk engine, continuous predicted default probabilities ar
 ### 11.2 Cost-Benefit Analysis
 In consumer lending economics, financial consequences are asymmetric:
 * **Cost of False Negative ($C_{FN}$):** Approving a defaulting borrower incurs principal loss minus recovery:
-  $$C_{FN} = \text{Avg. Loan Amount} \times (1 - \text{Recovery Rate}) = \$15,000 \times 0.70 = \$10,500$$
+  *Formula:* `C_FN = Avg_Loan_Amount * (1 - Recovery_Rate) = $15,000 * 0.70 = $10,500`
 * **Cost of False Positive ($C_{FP}$):** Rejecting a solvent borrower forfeits net interest spread margin:
-  $$C_{FP} = \text{Avg. Loan Amount} \times \text{Net Interest Margin} = \$15,000 \times 0.12 = \$1,800$$
-* **Cost Ratio:** $C_{FN} / C_{FP} = 10,500 / 1,800 \approx 5.83$. False negatives are **5.8x more expensive** than false positives.
+  *Formula:* `C_FP = Avg_Loan_Amount * Net_Interest_Margin = $15,000 * 0.12 = $1,800`
+* **Cost Asymmetry Ratio:** `C_FN / C_FP = 10,500 / 1,800 = 5.83`. Approving a defaulting loan is **5.8x more expensive** than rejecting a solvent application.
+
+![Figure 13: Net Financial Gain Curve Across Classification Cutoff Thresholds](figures/fig13_financial_gain.png)
+
+*Figure 13: Net economic capital portfolio value across classification thresholds, peaking at the optimal operating cutoff tau = 0.36 ($78.4 Million net benefit).*
 
 **Table 12: Economic Cost-Benefit Analysis ($1.60B Portfolio Capital Model)**
 | Underwriting Decision Policy | Default Losses Incurred | Solvent Capital Preserved | Net Portfolio Economic Gain | Capital Improvement |
@@ -805,6 +885,15 @@ The production web platform developed in this research project provides institut
 2. **Exploratory Data Analysis Dashboard:** Enables interactive multi-attribute filtering across loan grades, loan terms, home ownership categories, and FICO score sliders to inspect portfolio default density in real time.
 3. **Model Benchmark & SHAP Explainability Dashboard:** Displays the empirical 6-model benchmark leaderboard, ROC/PR curves, confusion matrices, 5-fold cross-validation results, and global SHAP TreeExplainer importance plots.
 4. **Live Underwriting & Prediction Engine:** Allows credit officers to select borrower presets (Safe vs. Risky vs. Custom Profile), input 8 core financial variables, and receive instantaneous approval decisions, monthly EMI projections, and zero-overlap safety spectrum visualizations.
+
+![Figure 14: Production Streamlit Web Dashboard: Executive Portfolio Overview](figures/fig14_executive_overview.png)
+
+*Figure 14: Production Streamlit executive portfolio monitoring dashboard with real-time KPI metrics and multi-model benchmark comparisons.*
+
+#### C.2 Live Underwriting & Prediction Decision Engine
+![Figure 15: Production Streamlit Web Dashboard: Live Underwriting Prediction Interface](figures/fig15_live_prediction.png)
+
+*Figure 15: Production Streamlit live credit application decision engine displaying instant risk scoring, tier categorization, and SHAP explainability breakdowns.*
 
 The complete code, serialized model artifacts, and live dashboard are publicly accessible via the research project GitHub repository:  
 **Repository:** `https://github.com/vimal-kansotia/loan-credit-risk-prediction`
