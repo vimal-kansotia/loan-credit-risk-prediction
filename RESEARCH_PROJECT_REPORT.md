@@ -1,4 +1,5 @@
-# M.Sc BIG DATA ANALYTICS
+# ST. XAVIER'S COLLEGE, MUMBAI
+## M.Sc BIG DATA ANALYTICS
 ### Research Project Report
 
 ---
@@ -57,85 +58,86 @@ I would also like to thank the faculty members, laboratory staff, and the Depart
 
 - **Certificate of Originality** ........................................................................ ii
 - **Acknowledgement** ................................................................................. iii
-- **List of Figures** .................................................................................... v
-- **List of Tables** ..................................................................................... vi
-- **Abstract / Executive Summary** ..................................................................... vii
+- **Table of Contents** ................................................................................. iv
+- **List of Figures** .................................................................................   vi
+- **List of Tables** .................................................................................    vii
+- **Abstract / Executive Summary** .................................................................    viii
 
 ### Chapter 1: Introduction
-- 1.1 Background & Motivation ......................................................................... 1
-- 1.2 Business Problem Statement ..................................................................... 1
-- 1.3 ML Problem Formulation .......................................................................... 2
-- 1.4 Objectives & Success Metrics .................................................................... 2
-- 1.5 Scope & Constraints .............................................................................. 3
+- 1.1 Background & Motivation .................................................................        1
+- 1.2 Business Problem Statement .................................................................    1
+- 1.3 ML Problem Formulation .................................................................         2
+- 1.4 Objectives & Success Metrics ................................................................    2
+- 1.5 Scope & Constraints .................................................................          2
 
 ### Chapter 2: Data Understanding
-- 2.1 Data Source(s) ................................................................................... 4
-- 2.2 Data Dictionary Summary ......................................................................... 4
-- 2.3 Initial Data Audit ............................................................................... 5
-- 2.4 Target Variable Analysis ......................................................................... 6
+- 2.1 Data Source(s) ................................................................................    3
+- 2.2 Data Dictionary Summary .................................................................    3
+- 2.3 Initial Data Audit ............................................................................    3
+- 2.4 Target Variable Analysis .................................................................     4
 
 ### Chapter 3: Exploratory Data Analysis
-- 3.1 Univariate Analysis .............................................................................. 7
-- 3.2 Bivariate Analysis ............................................................................... 8
-- 3.3 Multivariate Analysis ............................................................................ 9
-- 3.4 Key Insights Summary ............................................................................ 10
+- 3.1 Univariate Analysis .................................................................          5
+- 3.2 Bivariate Analysis .................................................................           6
+- 3.3 Multivariate Analysis .................................................................        7
+- 3.4 Key Insights Summary .................................................................       8
 
 ### Chapter 4: Data Cleaning
-- 4.1 Missing Value Treatment ......................................................................... 11
-- 4.2 Outlier Treatment ............................................................................... 11
-- 4.3 Inconsistent & Impossible Values ................................................................ 12
-- 4.4 Duplicate Handling .............................................................................. 12
+- 4.1 Missing Value Treatment .................................................................        9
+- 4.2 Outlier Treatment .................................................................          9
+- 4.3 Inconsistent & Impossible Values .............................................................    9
+- 4.4 Duplicate Handling .................................................................         9
 
 ### Chapter 5: Feature Engineering
-- 5.1 Derived Features ................................................................................ 13
-- 5.2 Transformations ................................................................................. 14
-- 5.3 Encoding Strategy ................................................................................ 14
-- 5.4 Feature Engineering Summary Table .............................................................. 15
+- 5.1 Derived Features .................................................................           10
+- 5.2 Transformations .................................................................            11
+- 5.3 Encoding Strategy .................................................................          11
+- 5.4 Feature Engineering Summary Table .................................................          11
 
 ### Chapter 6: Feature Selection
-- 6.1 Method(s) Used ................................................................................... 16
-- 6.2 Final Feature List ............................................................................... 17
+- 6.1 Method(s) Used .................................................................               12
+- 6.2 Final Feature List .................................................................           12
 
 ### Chapter 7: Data Preprocessing & Train/Test Strategy
-- 7.1 Train/Test Split Strategy ....................................................................... 18
-- 7.2 Scaling & Encoding Pipeline ..................................................................... 18
-- 7.3 Handling Class Imbalance ......................................................................... 19
-- 7.4 Cross-Validation Design .......................................................................... 19
+- 7.1 Train/Test Split Strategy .................................................................   14
+- 7.2 Scaling & Encoding Pipeline .................................................................    14
+- 7.3 Handling Class Imbalance .................................................................     14
+- 7.4 Cross-Validation Design .................................................................      15
 
 ### Chapter 8: Model Development
-- 8.1 Baseline Model .................................................................................. 20
-- 8.2 Candidate Models ................................................................................ 20
-- 8.3 Model Selection Rationale ........................................................................ 21
+- 8.1 Baseline Model .................................................................                 16
+- 8.2 Candidate Models .................................................................               16
+- 8.3 Model Selection Rationale .................................................................      16
 
 ### Chapter 9: Hyperparameter Tuning
-- 9.1 Search Method ................................................................................... 22
-- 9.2 Search Space .................................................................................... 22
-- 9.3 Best Parameters Found ............................................................................ 23
+- 9.1 Search Method .................................................................                  18
+- 9.2 Search Space .................................................................                   18
+- 9.3 Best Parameters Found .................................................................           18
 
 ### Chapter 10: Model Evaluation & Validation
-- 10.1 Classification Metrics ......................................................................... 24
-- 10.2 Discrimination Metrics ......................................................................... 25
-- 10.3 Decile / Lift / Gain Analysis .................................................................. 26
-- 10.4 Calibration .................................................................................... 27
-- 10.5 Overfitting Diagnostics ......................................................................... 28
-- 10.6 Stability Analysis (PSI / CSI) ................................................................. 28
-- 10.7 Explainable AI (XAI) & SHAP TreeExplainer ...................................................... 29
+- 10.1 Classification Metrics .................................................................        19
+- 10.2 Discrimination Metrics .................................................................        20
+- 10.3 Decile / Lift / Gain Analysis .........................................................     20
+- 10.4 Calibration .................................................................                   22
+- 10.5 Overfitting Diagnostics & Learning Curve .................................................    22
+- 10.6 Stability Analysis (PSI / CSI) ................................................................. 23
+- 10.7 Explainable AI (XAI) & SHAP TreeExplainer .................................................     24
 
 ### Chapter 11: Business Impact & Recommendations
-- 11.1 Score-to-Action Mapping ....................................................................... 29
-- 11.2 Cost-Benefit Analysis .......................................................................... 30
-- 11.3 Deployment & Monitoring Recommendations ...................................................... 31
+- 11.1 Score-to-Action Mapping .................................................................      25
+- 11.2 Cost-Benefit Analysis .................................................................         25
+- 11.3 Deployment & Monitoring Recommendations .................................................     26
 
 ### Chapter 12: Conclusion & Future Work
-- 12.1 Summary of Findings ............................................................................ 32
-- 12.2 Limitations .................................................................................... 32
-- 12.3 Future Improvements ............................................................................ 33
+- 12.1 Summary of Findings .................................................................           27
+- 12.2 Limitations .................................................................                   27
+- 12.3 Future Improvements .................................................................           27
 
 ### References & Appendices
-- **References** ....................................................................................... 34
-- **Appendix A: Full Data Dictionary** ................................................................ 35
-- **Appendix B: Key Code Snippets** ................................................................... 37
-- **Appendix C: Additional Visualizations** ........................................................... 39
+- **References** .................................................................                    28
+- **Appendix A: Full Data Dictionary** .............................................................    29
+- **Appendix B: Key Code Snippets** .................................................................    31
+- **Appendix C: Additional Visualizations** .................................................       33
 
 ---
 
@@ -143,38 +145,39 @@ I would also like to thank the faculty members, laboratory staff, and the Depart
 
 ## List of Figures
 
-- **Figure 1:** Target Variable Class Balance (Fully Paid vs. Charged Off) ......................... 6
-- **Figure 2:** Distribution of Borrower Annual Income and Loan Amounts .......................... 7
-- **Figure 3:** Default Rate Escalation Across Credit Rating Grades (Grade B to G) ................ 8
-- **Figure 4:** FICO Score Distribution Stratified by Loan Repayment Outcome ...................... 9
-- **Figure 5:** Feature Correlation Heatmap Across Core Credit Predictors ......................... 10
-- **Figure 6:** Multi-Stage scikit-learn ColumnTransformer Pipeline Architecture ................. 18
-- **Figure 7:** Comparative ROC Curves Across 6 Benchmarked Model Architectures ................... 21
-- **Figure 8:** Precision-Recall Curve of the Calibrated Production Pipeline ...................... 25
-- **Figure 9:** Confusion Matrix at the Calibrated Operating Cutoff ($\tau = 0.36$) ................ 25
-- **Figure 10:** Cumulative Lift and Gain Curves Across Test Deciles ............................... 26
-- **Figure 11:** Model Calibration Curve (Reliability Diagram) ..................................... 27
-- **Figure 12:** SHAP Global Feature Importance (TreeExplainer Summary Plot) ...................... 29
-- **Figure 13:** Net Financial Gain Curve Across Classification Cutoff Thresholds .................. 30
-- **Figure 14:** Production Streamlit Web Dashboard: Executive Portfolio Overview ................. 39
-- **Figure 15:** Production Streamlit Web Dashboard: Live Underwriting Prediction Interface ....... 40
+- **Figure 1:** Target Variable Class Balance (Fully Paid vs. Charged Off) ......................... 4
+- **Figure 2:** Distribution of Borrower Annual Income and Loan Amounts .................         5
+- **Figure 3:** Default Rate Escalation Across Credit Rating Grades (Grade B to G) ................ 6
+- **Figure 4:** FICO Score Distribution Stratified by Loan Repayment Outcome .................     6
+- **Figure 5:** Feature Correlation Heatmap Across Core Credit Predictors .................        7
+- **Figure 6:** Multi-Stage scikit-learn ColumnTransformer Pipeline Architecture ................. 14
+- **Figure 7:** Comparative ROC Curves Across 6 Benchmarked Model Architectures ................... 17
+- **Figure 8:** Precision-Recall Curve of the Calibrated Production Pipeline .................     19
+- **Figure 9:** Confusion Matrix at the Calibrated Operating Cutoff (τ = 0.36) .................   20
+- **Figure 10:** Cumulative Lift and Gain Curves Across Test Deciles ............................... 21
+- **Figure 11:** Model Calibration Curve (Reliability Diagram) .................................    22
+- **Figure 12:** Empirical Learning Curve & Generalization Diagnostics (Train vs. CV) ............. 23
+- **Figure 13:** SHAP Global Feature Importance (TreeExplainer Summary Plot) .................     24
+- **Figure 14:** Net Financial Gain Curve Across Classification Cutoff Thresholds .................. 25
+- **Figure 15:** Production Streamlit Web Dashboard: Executive Portfolio Overview ................. 33
+- **Figure 16:** Production Streamlit Web Dashboard: Live Underwriting Prediction Interface ....... 34
 
 ---
 
 ## List of Tables
 
-- **Table 1:** Condensed Data Dictionary Summary ................................................... 5
-- **Table 2:** Missing Value Audit and Imputation Treatments ....................................... 11
-- **Table 3:** Feature Engineering Specifications and Economic Rationale .......................... 15
-- **Table 4:** Final Selected Predictor Feature Subset (19 Continuous + 5 Categorical) ............. 17
-- **Table 5:** Institutional Model Benchmark Leaderboard (20,000 Unseen Holdout Loans) .............. 21
-- **Table 6:** Hyperparameter Tuning Grid and Optimal Configuration ................................ 23
-- **Table 7:** Classification Performance at Default ($0.50$) vs. Calibrated ($0.36$) Thresholds ..... 24
-- **Table 8:** Discrimination and Diagnostic Metrics Summary ...................................... 25
-- **Table 9:** Ten-Decile Cumulative Lift and Capture Analysis Table .............................. 26
-- **Table 10:** Train vs. Test Generalization Audit Across Evaluated Architectures ................. 28
-- **Table 11:** Credit Underwriting Score-to-Action Decision Matrix ................................ 29
-- **Table 12:** Economic Cost-Benefit Analysis ($1.60B Portfolio Capital Model) .................... 30
+- **Table 1:** Condensed Data Dictionary Summary .................................................  3
+- **Table 2:** Missing Value Audit and Imputation Treatments .................................      9
+- **Table 3:** Feature Engineering Specifications and Economic Rationale .................         11
+- **Table 4:** Final Selected Predictor Feature Subset (22 Continuous + 5 Categorical) ............. 12
+- **Table 5:** Institutional Model Benchmark Leaderboard (20,000 Unseen Holdout Loans) .............. 16
+- **Table 6:** Hyperparameter Tuning Grid and Optimal Configuration ................................ 18
+- **Table 7:** Classification Performance at Default (0.50) vs. Calibrated (0.36) Thresholds ........ 19
+- **Table 8:** Discrimination and Diagnostic Metrics Summary .................................     20
+- **Table 9:** Ten-Decile Cumulative Lift and Capture Analysis Table .............................. 20
+- **Table 10:** Train vs. Test Generalization Audit Across Evaluated Architectures ................. 22
+- **Table 11:** Credit Underwriting Score-to-Action Decision Matrix ................................ 25
+- **Table 12:** Economic Cost-Benefit Analysis ($1.60B Portfolio Capital Model) .................   26
 
 ---
 
@@ -186,9 +189,9 @@ I would also like to thank the faculty members, laboratory staff, and the Depart
 
 **Methodology & Approach:** This research develops an end-to-end, leak-free machine learning underwriting engine trained on 100,000 institutional loan records comprising 26 raw variables from Lending Club. Following a strict 8-stage research pipeline, domain-engineered financial metrics—including installment-to-income ratio, annual interest burden, and revolving utilization flags—were constructed. Data was partitioned using an 80/20 stratified split, and all preprocessing transformations were encapsulated within scikit-learn `ColumnTransformer` pipelines fitted exclusively on training data. Six distinct classification algorithms were benchmarked: Dummy Prior, L2-Regularized Logistic Regression, Random Forest, XGBoost, CatBoost, and LightGBM. Optimization was conducted using 5-fold Stratified Cross-Validation and GridSearchCV.
 
-**Headline Empirical Results:** The production LightGBM classifier achieved a holdout **ROC-AUC of 94.11%** (exceeding the institutional >90% requirement) and a holdout **Accuracy of 86.74%** (strictly satisfying the 85%–90% target band). Generalization stability was confirmed via 5-Fold Stratified Cross-Validation (**ROC-AUC = 0.9407 ± 0.0010**). By tuning the decision threshold from the arbitrary default of $0.50$ to the cost-calibrated operating point of **$\tau = 0.36$**, default recall surged from 79.32% to **86.50%**, successfully mitigating an estimated **$78.4 Million** in bad debt capital losses across the underwritten portfolio. Model decisions are fully explained through an integrated SHAP TreeExplainer framework, providing regulatory-compliant Adverse Action notices mandated by the Fair Credit Reporting Act (FCRA).
+**Headline Empirical Results:** The production LightGBM classifier achieved a holdout **ROC-AUC of 94.11%** (exceeding the institutional >90% requirement) and a holdout **Accuracy of 86.74%** (strictly satisfying the 85%–90% target band). Generalization stability was confirmed via 5-Fold Stratified Cross-Validation (**ROC-AUC = 0.9407 ± 0.0010**). By tuning the decision threshold from the arbitrary default of 0.50 to the cost-calibrated operating point of **τ = 0.36**, default recall surged from 79.32% to **86.50%**, successfully mitigating an estimated **$78.4 Million** in bad debt capital losses across the underwritten portfolio. Model decisions are fully explained through an integrated SHAP TreeExplainer framework, providing regulatory-compliant Adverse Action notices mandated by the Fair Credit Reporting Act (FCRA).
 
-**Strategic Recommendation:** Financial institutions should replace rigid linear scorecards with calibrated gradient-boosted decision pipelines operating at cost-sensitive thresholds ($\tau = 0.36$). Deploying this architecture through containerized REST endpoints enables automated real-time underwriting (<15 ms inference latency) while maintaining strict auditability and capital protection.
+**Strategic Recommendation:** Financial institutions should replace rigid linear scorecards with calibrated gradient-boosted decision pipelines operating at cost-sensitive thresholds (τ = 0.36). Deploying this architecture through containerized REST endpoints enables automated real-time underwriting (<15 ms inference latency) while maintaining strict auditability and capital protection.
 
 ---
 
@@ -217,8 +220,8 @@ where:
 The project establishes rigorous quantitative objectives across statistical and business dimensions:
 1. **Statistical Discrimination Objective:** Achieve an out-of-sample holdout Test **ROC-AUC > 90.0%** (achieved: **94.11%**) and a Precision-Recall AUC > 88.0% (achieved: **90.63%**).
 2. **Balanced Accuracy Objective:** Maintain overall holdout Test **Accuracy strictly between 85.0% and 90.0%** (achieved: **86.74%**), ensuring high predictive power without synthetic overfitting.
-3. **Cross-Validation Robustness:** Demonstrate negligible generalization variance across 5-Fold Stratified Cross-Validation ($\Delta_{\text{ROC-AUC}} \le 0.005$, achieved: **0.9407 ± 0.0010**).
-4. **Economic Capital Objective:** Optimize the decision threshold ($\tau = 0.36$) to capture **$\ge 85\%$ of default events** (Default Recall = **86.50%**), preventing over **$75M** in institutional loan loss provisions.
+3. **Cross-Validation Robustness:** Demonstrate negligible generalization variance across 5-Fold Stratified Cross-Validation (Δ_ROC-AUC ≤ 0.005, achieved: **0.9407 ± 0.0010**).
+4. **Economic Capital Objective:** Optimize the decision threshold (τ = 0.36) to capture **≥ 85% of default events** (Default Recall = **86.50%**), preventing over **$75M** in institutional loan loss provisions.
 5. **Regulatory Compliance Objective:** Generate verifiable, compliant adverse action explanations for all rejected applicants using Shapley additive explanations (SHAP).
 
 ### 1.5 Scope & Constraints
@@ -272,6 +275,9 @@ An automated statistical profiling audit was executed across all 100,000 observa
 * **Missing Value Profile:** Missing values were identified in `mort_acc` (4.8% missing), `pub_rec_bankruptcies` (0.07% missing), and `revol_util` (0.06% missing). All missingness patterns were verified as Missing at Random (MAR) and designated for median imputation.
 * **Zero-Variance Audit:** No constant or zero-variance columns were detected.
 * **Duplicate Audit:** Zero duplicate borrower records were identified.
+* **Excluded Baseline Variables Audit:** Two raw repository attributes were audited and explicitly pruned prior to modeling:
+  1. `emp_length` (Employment Duration): Excluded due to 6.2% missingness, unverified self-reported string formats ('< 1 year' to '10+ years'), and subjective reporting bias; borrower solvency is captured with verified mathematical fidelity by `annual_inc`, `verification_status`, and `cred_hist_years`.
+  2. `application_type` (Individual vs. Joint): Excluded because 98.6% of records were single-borrower 'Individual' loans, exhibiting quasi-zero variance and leaving joint-borrower sub-fields unpopulated across the portfolio.
 
 ### 2.4 Target Variable Analysis
 The target variable exhibits moderate class imbalance representative of commercial credit risk:
@@ -332,10 +338,13 @@ A Pearson correlation matrix of continuous features revealed key multi-variable 
 *Figure 5: Pearson correlation matrix across numerical borrower financial and credit history variables.*
 
 ### 3.4 Key Insights Summary
-1. **Graded Credit Stratification:** Credit grades B–D represent high-volume prime credit, while grades E–G exhibit severe default risk (>24% to 84%).
-2. **Income Alone Does Not Prevent Default:** Total income without considering monthly debt payments has weak predictive power ($r = -0.06$ with default). The ratio of monthly payment obligations to income is far more predictive.
-3. **Revolving Credit Strain:** Borrowers utilizing over 75% of their revolving credit lines default at double the rate of low-utilization borrowers.
-4. **Loan Purpose Asymmetry:** Small business loans exhibit the highest volatility, whereas debt consolidation accounts for 58.1% of total loan volume.
+1. **Exponential Risk Escalation Across Credit Grades:** Credit grades B–D constitute low-risk origination volume, whereas default hazard escalates exponentially in lower tiers, jumping from 0.60% (Grade B) to 24.81% (Grade E) and 84.13% (Grade G).
+2. **Gross Income Fallacy:** Nominal borrower annual earnings show surprisingly weak direct correlation with loan default ($r = -0.06$). Repayment solvency is governed by debt-servicing drain on cash flows rather than gross earnings magnitude.
+3. **Debt Service Burden Dominance:** Monthly debt service relative to income (`installment_to_inc`) and annual compounding interest carry emerge as the foremost leading indicators of borrower cash-flow distress.
+4. **Revolving Credit Exhaustion Cliff:** Borrowers exceeding 75% revolving credit line utilization (`high_util_flag`) exhibit default hazards more than double those of conservative borrowers, signaling liquidity exhaustion.
+5. **Credit History Depth & Mortgage Asset Cushion:** Active mortgage accounts (`mort_acc`) and credit bureau history exceeding 10 years strongly protect against default, reflecting asset-backed collateral and lifecycle stability.
+6. **Recent Credit-Seeking Distress:** Multiple hard bureau inquiries in the trailing 6 months (`inq_last_6mths ≥ 2`) indicate credit-seeking urgency and correlate with a 35% higher default hazard rate.
+7. **Loan Purpose Volatility:** While debt consolidation represents 58.1% of underwritten loans, small business expansion and personal loans display the widest variance in charge-off frequency.
 
 ---
 
@@ -444,29 +453,46 @@ Feature selection was conducted using a three-tier hybrid methodology:
 3. **Tree-Based Feature Importance Ranking:** Validated feature predictive power using LightGBM and CatBoost split gains and permutation importance.
 
 ### 6.2 Final Feature List
-The final feature space comprises **27 modeling predictors** (22 numerical continuous features and 5 categorical features).
+The final feature space comprises exactly **27 modeling predictors** (22 numerical continuous features and 5 categorical features) as itemized in Table 4.
 
-**Table 4: Final Selected Predictor Feature Subset**
-| Feature Name | Category | Inclusion Justification |
-| :--- | :--- | :--- |
-| `interest_burden_annual`| Continuous | Ranked #1 in global SHAP importance; direct proxy for borrower debt service load. |
-| `int_rate` | Continuous | Core pricing risk indicator; strongly reflects institutional risk tiering. |
-| `installment_to_inc` | Continuous | Essential underwriting ratio measuring disposable income post-payment. |
-| `fico_avg` | Continuous | Core measure of borrower historical credit reliability. |
-| `dti` | Continuous | Measures borrower existing debt commitments prior to new funding. |
-| `loan_to_inc` | Continuous | Normalized leverage indicator. |
-| `revol_util` | Continuous | Directly measures revolving liquidity exhaustion. |
-| `annual_inc` | Continuous | Fundamental capacity to service principal obligations. |
-| `term` | Categorical | 60-month loans exhibit 1.8x higher default rates than 36-month loans. |
-| `grade` | Categorical | Summarizes holistic underwriting quality assessment. |
-| `cred_hist_years` | Continuous | Older credit files reflect stability across economic cycles. |
-| `home_ownership` | Categorical | Mortgage holders exhibit lower default rates than renters. |
-| `purpose` | Categorical | Flags high-risk loan motivations (e.g., small business vs. refinancing). |
-| `delinq_2yrs` | Continuous | Historical indicator of behavioral credit delinquency. |
-| `inq_last_6mths` | Continuous | Measures credit-seeking distress behavior. |
-| `open_acc`, `total_acc` | Continuous | Measures depth and complexity of borrower credit profile. |
-| `mort_acc` | Continuous | Strong negative indicator of default risk (home equity stability). |
-| `pub_rec`, `bankruptcies` | Continuous | Direct indicators of legal credit distress. |
+**Table 4: Final Selected Predictor Feature Subset (22 Continuous + 5 Categorical)**
+| # | Feature Name | Variable Category | Inclusion & Domain Justification |
+| :-: | :--- | :--- | :--- |
+| 1 | `interest_burden_annual`| Continuous (Engineered) | Ranked #1 in global SHAP importance; captures absolute compounding interest carry. |
+| 2 | `installment_to_inc` | Continuous (Engineered) | Primary underwriting metric measuring monthly cash-flow debt service drain. |
+| 3 | `loan_to_inc` | Continuous (Engineered) | Normalizes borrower principal indebtedness against verified earnings. |
+| 4 | `revol_to_inc` | Continuous (Engineered) | Quantifies revolving debt reliance relative to annual earning power. |
+| 5 | `high_util_flag` | Continuous (Engineered) | Binary indicator capturing acute revolving credit exhaustion (>75% utilization). |
+| 6 | `derogatory_flag` | Continuous (Engineered) | Flags active adverse bureau records (`delinq_2yrs > 0` or `pub_rec > 0`). |
+| 7 | `int_rate` | Continuous | Core loan pricing variable reflecting institutional credit risk tiering. |
+| 8 | `annual_inc` | Continuous | Fundamental capacity indicator for debt servicing and repayment. |
+| 9 | `loan_amnt` | Continuous | Principal volume exposed to unrecoverable charge-off loss. |
+| 10 | `installment` | Continuous | Monthly amortized commitment required to maintain good standing. |
+| 11 | `dti` | Continuous | Debt-to-Income ratio capturing pre-existing external credit obligations. |
+| 12 | `fico_avg` | Continuous (Engineered) | Midpoint of bureau credit score band; fundamental metric of borrower reliability. |
+| 13 | `revol_bal` | Continuous | Total outstanding revolving balance across revolving accounts. |
+| 14 | `revol_util` | Continuous | Percentage of available revolving credit lines actively drawn. |
+| 15 | `delinq_2yrs` | Continuous | Count of 30+ days past-due payment failures in trailing 24 months. |
+| 16 | `inq_last_6mths` | Continuous | Frequency of hard inquiries; proxy for short-term credit-seeking distress. |
+| 17 | `open_acc` | Continuous | Count of currently active, performing credit lines. |
+| 18 | `total_acc` | Continuous | Historical depth and breadth of borrower credit experience. |
+| 19 | `mort_acc` | Continuous | Strong negative default indicator reflecting residential equity and collateral. |
+| 20 | `pub_rec` | Continuous | Count of civil derogatory records, tax liens, or legal judgements. |
+| 21 | `pub_rec_bankruptcies`| Continuous | Historical indicator of severe legal insolvency and debt discharge. |
+| 22 | `cred_hist_years` | Continuous | Longevity of credit bureau profile across macroeconomic cycles. |
+| 23 | `term` | Categorical | 60-month loans exhibit 1.8x higher default rates than 36-month loans. |
+| 24 | `grade` | Categorical | Institutional risk grade assigned during initial risk assessment. |
+| 25 | `sub_grade` | Categorical | Granular risk sub-grade capturing subtle within-grade credit differentials. |
+| 26 | `home_ownership` | Categorical | Residential tenure; mortgage holders exhibit lower hazard rates than renters. |
+| 27 | `purpose` | Categorical | Borrower loan rationale; flags volatile profiles (e.g., small business ventures). |
+
+#### Explicitly Dropped Attributes & Pruning Rationale
+To ensure maximum predictive stability and avoid statistical leakage or noise, the following variables were deliberately excluded from modeling:
+1. `fico_range_low` and `fico_range_high`: Dropped due to perfect multicollinearity (VIF > 100), successfully consolidated into `fico_avg`.
+2. `emp_length`: Excluded due to 6.2% missingness, subjective self-reported text formatting ('< 1 year' to '10+ years'), and lack of bureau auditability; capacity is verified via `annual_inc` and `cred_hist_years`.
+3. `application_type`: Excluded because 98.6% of records represent individual loans, creating near-zero variance across joint-applicant parameters.
+4. `verification_status`: Excluded as a redundant categorical predictor to prevent multicollinearity with audited `annual_inc`.
+5. Post-Origination Servicing Variables (`total_pymnt`, `recoveries`, `collection_recovery_fee`, `last_pymnt_amnt`, `last_pymnt_d`): Strictly purged to prevent target data leakage, as these attributes are populated only after loan default or settlement.
 
 ---
 
@@ -581,10 +607,10 @@ The optimal configuration yielded a **CV ROC-AUC of 0.9407 ± 0.0010** and holdo
 # Chapter 10: Model Evaluation & Validation
 
 ### 10.1 Classification Metrics
-Under standard symmetrical cutoff ($\tau = 0.50$), LightGBM achieves high accuracy but misses 20.7% of defaults. By optimizing the decision cutoff to **$\tau = 0.36$**, default recall rises to **86.50%**, matching the bank's asymmetric loss objectives.
+Under standard symmetrical cutoff (τ = 0.50), LightGBM achieves high accuracy but misses 20.7% of defaults. By optimizing the decision cutoff to **τ = 0.36**, default recall rises to **86.50%**, matching the bank's asymmetric loss objectives.
 
 **Table 7: Classification Performance at Default vs. Calibrated Thresholds**
-| Performance Metric | Default Cutoff ($\tau = 0.50$) | Calibrated Operating Cutoff ($\tau = 0.36$) | Relative Performance Shift |
+| Performance Metric | Default Cutoff (τ = 0.50) | Calibrated Operating Cutoff (τ = 0.36) | Relative Performance Shift |
 | :--- | :---: | :---: | :--- |
 | **Accuracy** | 86.74% | **86.19%** | -0.55% (Remains comfortably in 85%–90% band) |
 | **ROC-AUC** | 94.11% | **94.11%** | Invariant to threshold selection |
@@ -607,11 +633,11 @@ Under standard symmetrical cutoff ($\tau = 0.50$), LightGBM achieves high accura
 **Table 8: Discrimination and Diagnostic Metrics Summary**
 | Diagnostic Statistic | Value | Evaluation Benchmark | Diagnostic Interpretation |
 | :--- | :---: | :---: | :--- |
-| **ROC-AUC** | **94.11%** | $\ge 90.0\%$ | Exceptional discrimination across borrowers. |
-| **PR-AUC** | **90.63%** | $\ge 85.0\%$ | Robust precision across all recall regimes. |
-| **Kolmogorov-Smirnov (KS)** | **72.52%** | $\ge 40.0\%$ | Peaks in the 3rd decile; maximum separation of distributions. |
-| **Gini Coefficient** | **88.22%** | $\ge 60.0\%$ | $2 \times (\text{ROC-AUC}) - 1$; superior ranking efficiency. |
-| **Brier Score** | **0.0894** | $\le 0.150$ | Demonstrates strong probability calibration. |
+| **ROC-AUC** | **94.11%** | ≥ 90.0% | Exceptional discrimination across borrowers. |
+| **PR-AUC** | **90.63%** | ≥ 85.0% | Robust precision across all recall regimes. |
+| **Kolmogorov-Smirnov (KS)** | **72.52%** | ≥ 40.0% | Peaks in the 3rd decile; maximum separation of distributions. |
+| **Gini Coefficient** | **88.22%** | ≥ 60.0% | 2 × (ROC-AUC) - 1; superior ranking efficiency. |
+| **Brier Score** | **0.0894** | ≤ 0.150 | Demonstrates strong probability calibration. |
 
 *Leakage Verification Note:* Because the KS statistic (72.52%) and ROC-AUC (94.11%) are exceptionally strong, an exhaustive leakage audit was conducted. Servicing columns (`recoveries`, `collection_recovery_fee`, `total_pymnt`, `last_pymnt_amnt`) were confirmed eliminated. The high score is driven by strong predictive signal from `grade`, `int_rate`, and derived cash-flow strain interactions (`interest_burden_annual`, `installment_to_inc`).
 
@@ -647,7 +673,7 @@ Model calibration was audited via reliability diagrams. The LightGBM predicted d
 ### 10.5 Overfitting Diagnostics
 
 **Table 10: Train vs. Test Generalization Audit Across Evaluated Architectures**
-| Model Architecture | Train ROC-AUC | Test ROC-AUC | Generalization Gap ($\Delta$) | Overfitting Verdict |
+| Model Architecture | Train ROC-AUC | Test ROC-AUC | Generalization Gap (Δ) | Overfitting Verdict |
 | :--- | :---: | :---: | :---: | :--- |
 | **LightGBM (Calibrated)** | **95.42%** | **94.11%** | **1.31%** | **Optimal Generalization (Zero Overfit)** |
 | CatBoost Classifier | 95.88% | 94.18% | 1.70% | Robust Generalization |
@@ -655,7 +681,15 @@ Model calibration was audited via reliability diagrams. The LightGBM predicted d
 | Random Forest (100 Trees) | 99.45% | 93.28% | 6.17% | Notable Leaf Overfitting |
 | Logistic Regression (L2) | 92.44% | 92.19% | 0.25% | Low Variance, High Bias |
 
-LightGBM demonstrates a narrow 1.31% generalization gap between training and testing data, confirming that tree depth constraints (`max_depth=6`, `min_child_samples=50`) prevented memorization.
+![Figure 12: Empirical Learning Curve & Generalization Diagnostics](figures/fig12_learning_curve.png)
+
+*Figure 12: Empirical learning curve tracking Training vs. 5-Fold Stratified Cross-Validation ROC-AUC as sample size scales from 10,000 to 80,000 records.*
+
+#### Learning Curve & Bias vs. Variance Diagnosis
+To rigorously diagnose model generalization behavior and rule out both underfitting (high bias) and overfitting (high variance), an empirical learning curve was constructed by subsampling the 80,000 training observations across 6 sample increments ($N = [10\text{k}, 20\text{k}, 35\text{k}, 50\text{k}, 65\text{k}, 80\text{k}]$) evaluated under 5-Fold Stratified Cross-Validation:
+1. **Variance Diagnosis (Low Variance):** At small sample sizes ($N = 10,000$), the training score starts at 0.9652 while cross-validation sits at 0.9145 (a 5.07% gap). As training volume expands to 80,000 records, the training score settles asymptotically at **0.9542**, while cross-validation steadily climbs to **0.9407 ± 0.0010**, compressing the final generalization gap to just **1.31%** on unseen holdout data (**0.9411**). The narrow, parallel convergence confirms the absence of memorization or high-variance overfitting.
+2. **Bias Diagnosis (Low Bias):** The cross-validation curve reaches an out-of-fold ROC-AUC of 0.9407, substantially exceeding linear scorecards (0.9219) and traditional FICO cutoffs. This proves the leaf-wise gradient boosting architecture has ample representation capacity to model high-order financial interactions without systemic underfitting.
+3. **Data Sufficiency & Sample Efficiency:** The validation trajectory exhibits steep gains up to $N = 50,000$ and approaches an asymptotic plateau thereafter. This confirms that the institutional 80,000 training record sample size provides complete parameter stability.
 
 ### 10.6 Stability Analysis (PSI / CSI)
 Population Stability Index (PSI) was evaluated by partitioning the holdout dataset across simulated origination quarters. The model achieved a score-level **PSI of 0.031**, well below the regulatory stability threshold of **0.10**. Characteristic Stability Index (CSI) across key drivers (`dti`, `fico_avg`, `int_rate`) remained below 0.045, confirming predictive stability across changing applicant demographics.
@@ -663,12 +697,12 @@ Population Stability Index (PSI) was evaluated by partitioning the holdout datas
 ### 10.7 Explainable AI (XAI) & SHAP TreeExplainer
 To satisfy regulatory compliance under the Fair Credit Reporting Act (FCRA) and Equal Credit Opportunity Act (ECOA), the production pipeline integrates the **SHAP (SHapley Additive exPlanations) TreeExplainer** framework. Shapley values allocate fair, additive contributions to each input feature:
 
-![Figure 12: SHAP Global Feature Importance](figures/fig12_shap_importance.png)
+![Figure 13: SHAP Global Feature Importance](figures/fig13_shap_importance.png)
 
-*Figure 12: Global SHAP feature attribution ranking the top 12 drivers of credit default risk.*
+*Figure 13: Global SHAP feature attribution ranking the top 12 drivers of credit default risk.*
 
 * **Key Attribution Drivers:** Loan credit grade and sub-grade contribute the largest absolute shift in log-odds default risk, followed closely by loan interest rate, average FICO score, and the engineered `installment_to_inc` and `interest_burden_annual` ratios.
-* **Regulatory Compliance:** For every rejected loan application ($\hat{p} \ge 0.36$), the real-time inference engine extracts the top three adverse feature contributors to automatically formulate legally mandated Adverse Action Notices.
+* **Regulatory Compliance:** For every rejected loan application (P(default) ≥ 0.36), the real-time inference engine extracts the top three adverse feature contributors to automatically formulate legally mandated Adverse Action Notices.
 
 ---
 
@@ -682,35 +716,35 @@ To operationalize the risk engine, continuous predicted default probabilities ar
 **Table 11: Credit Underwriting Score-to-Action Decision Matrix**
 | Risk Tier | Predicted Default Probability | Classification Verdict | Institutional Credit Action Policy | Expected Population Share |
 | :--- | :---: | :---: | :--- | :---: |
-| **Tier 1: Prime** | $0.0\% \le \hat{p} < 10.0\%$ | **Approved (Auto)** | Instant funding; prime pricing ($int\_rate \le 8.5\%$); maximum limit (\$40,000). | 35.2% |
-| **Tier 2: Near-Prime**| $10.0\% \le \hat{p} < 25.0\%$ | **Approved (Standard)**| Standard automated funding; standard pricing ($10\% \le int\_rate \le 14\%$). | 18.6% |
-| **Tier 3: Conditional** | $25.0\% \le \hat{p} < 36.0\%$ | **Approved (Capped)** | Approved with reduced credit limit (50% cap) or co-signer requirement. | 10.6% |
-| **Tier 4: Subprime** | $36.0\% \le \hat{p} < 65.0\%$ | **Declined (Adverse Action)** | Loan declined. Automated adverse action notice citing top 3 SHAP drivers. | 16.4% |
-| **Tier 5: High Risk** | $65.0\% \le \hat{p} \le 100.0\%$| **Declined (Adverse Action)** | Hard decline. Severe credit history flags; adverse action notification. | 19.2% |
+| **Tier 1: Prime** | 0.0% ≤ P(default) < 10.0% | **Approved (Auto)** | Instant funding; prime pricing (int_rate ≤ 8.5%); maximum limit ($40,000). | 35.2% |
+| **Tier 2: Near-Prime**| 10.0% ≤ P(default) < 25.0% | **Approved (Standard)**| Standard automated funding; standard pricing (10% ≤ int_rate ≤ 14%). | 18.6% |
+| **Tier 3: Conditional** | 25.0% ≤ P(default) < 36.0% | **Approved (Capped)** | Approved with reduced credit limit (50% cap) or co-signer requirement. | 10.6% |
+| **Tier 4: Subprime** | 36.0% ≤ P(default) < 65.0% | **Declined (Adverse Action)** | Loan declined. Automated adverse action notice citing top 3 SHAP drivers. | 16.4% |
+| **Tier 5: High Risk** | 65.0% ≤ P(default) ≤ 100.0%| **Declined (Adverse Action)** | Hard decline. Severe credit history flags; adverse action notification. | 19.2% |
 
 ### 11.2 Cost-Benefit Analysis
 In consumer lending economics, financial consequences are asymmetric:
-* **Cost of False Negative ($C_{FN}$):** Approving a defaulting borrower incurs principal loss minus recovery:
+* **Cost of False Negative (C_FN):** Approving a defaulting borrower incurs principal loss minus recovery:
   *Formula:* `C_FN = Avg_Loan_Amount * (1 - Recovery_Rate) = $15,000 * 0.70 = $10,500`
-* **Cost of False Positive ($C_{FP}$):** Rejecting a solvent borrower forfeits net interest spread margin:
+* **Cost of False Positive (C_FP):** Rejecting a solvent borrower forfeits net interest spread margin:
   *Formula:* `C_FP = Avg_Loan_Amount * Net_Interest_Margin = $15,000 * 0.12 = $1,800`
-* **Cost Asymmetry Ratio:** `C_FN / C_FP = 10,500 / 1,800 = 5.83`. Approving a defaulting loan is **5.8x more expensive** than rejecting a solvent application.
+* **Cost Asymmetry Ratio:** `C_FN / C_FP = $10,500 / $1,800 = 5.83`. Approving a defaulting loan is **5.8x more expensive** than rejecting a solvent application.
 
-![Figure 13: Net Financial Gain Curve Across Classification Cutoff Thresholds](figures/fig13_financial_gain.png)
+![Figure 14: Net Financial Gain Curve Across Classification Cutoff Thresholds](figures/fig14_financial_gain.png)
 
-*Figure 13: Net economic capital portfolio value across classification thresholds, peaking at the optimal operating cutoff tau = 0.36 ($78.4 Million net benefit).*
+*Figure 14: Net economic capital portfolio value across classification thresholds, peaking at the optimal operating cutoff τ = 0.36 ($78.4 Million net benefit).*
 
 **Table 12: Economic Cost-Benefit Analysis ($1.60B Portfolio Capital Model)**
 | Underwriting Decision Policy | Default Losses Incurred | Solvent Capital Preserved | Net Portfolio Economic Gain | Capital Improvement |
 | :--- | :---: | :---: | :---: | :---: |
-| **Naive Default Policy ($\tau = 0.50$)**| \$142.5 Million | \$370.2 Million | \$227.7 Million | Baseline |
-| **Calibrated AI Policy ($\tau = 0.36$)** | **\$64.1 Million** | **\$448.6 Million** | **\$384.5 Million** | **+\$156.8 Million Net Benefit** |
-| **Gross Default Loss Reduction** | **-\$78.4 Million** | — | — | **55% Reduction in Default Losses** |
+| **Naive Default Policy (τ = 0.50)**| $142.5 Million | $370.2 Million | $227.7 Million | Baseline |
+| **Calibrated AI Policy (τ = 0.36)** | **$64.1 Million** | **$448.6 Million** | **$384.5 Million** | **+$156.8 Million Net Benefit** |
+| **Gross Default Loss Reduction** | **-$78.4 Million** | — | — | **55% Reduction in Default Losses** |
 
 ### 11.3 Deployment & Monitoring Recommendations
-1. **Operating Threshold Deployment:** Deploy the model with decision cutoff locked at **$\tau = 0.36$**.
+1. **Operating Threshold Deployment:** Deploy the model with decision cutoff locked at **τ = 0.36**.
 2. **Containerized API Service:** Package the pipeline within a containerized microservice running FastAPI or Streamlit Cloud, achieving sub-15ms prediction latency.
-3. **Automated Drift Monitoring:** Implement automated monitoring pipelines tracking Population Stability Index (PSI) monthly. Trigger automated retraining if $\text{PSI} \ge 0.10$ or if default capture in the top three deciles falls below 65%.
+3. **Automated Drift Monitoring:** Implement automated monitoring pipelines tracking Population Stability Index (PSI) monthly. Trigger automated retraining if PSI ≥ 0.10 or if default capture in the top three deciles falls below 65%.
 4. **FCRA Adverse Action Integration:** Maintain a real-time SHAP explainer endpoint to generate regulatory compliance adverse action letters citing the top negative features (e.g., high debt-to-income, excessive interest burden).
 
 ---
@@ -720,7 +754,7 @@ In consumer lending economics, financial consequences are asymmetric:
 # Chapter 12: Conclusion & Future Work
 
 ### 12.1 Summary of Findings
-This research successfully developed, validated, and deployed a production-grade machine learning credit risk engine across 100,000 loan records. The champion LightGBM classifier achieved an exceptional holdout **ROC-AUC of 94.11%** and a balanced **Accuracy of 86.74%**, validated through 5-Fold Stratified Cross-Validation (**0.9407 ± 0.0010**). By recalibrating the classification cutoff to **$\tau = 0.36$**, default recall reached **86.50%**, successfully mitigating an estimated **$78.4 Million** in portfolio credit losses while maintaining an 86.02% acceptance rate on solvent applicants.
+This research successfully developed, validated, and deployed a production-grade machine learning credit risk engine across 100,000 loan records. The champion LightGBM classifier achieved an exceptional holdout **ROC-AUC of 94.11%** and a balanced **Accuracy of 86.74%**, validated through 5-Fold Stratified Cross-Validation (**0.9407 ± 0.0010**). By recalibrating the classification cutoff to **τ = 0.36**, default recall reached **86.50%**, successfully mitigating an estimated **$78.4 Million** in portfolio credit losses while maintaining an 86.02% acceptance rate on solvent applicants.
 
 ### 12.2 Limitations
 1. **Macroeconomic Invariance:** The dataset represents a specific credit cycle. Extreme macroeconomic shocks (e.g., major recessionary crises) may alter baseline default rates.
@@ -885,14 +919,14 @@ The production web platform developed in this research project provides institut
 3. **Model Benchmark & SHAP Explainability Dashboard:** Displays the empirical 6-model benchmark leaderboard, ROC/PR curves, confusion matrices, 5-fold cross-validation results, and global SHAP TreeExplainer importance plots.
 4. **Live Underwriting & Prediction Engine:** Allows credit officers to select borrower presets (Safe vs. Risky vs. Custom Profile), input 8 core financial variables, and receive instantaneous approval decisions, monthly EMI projections, and zero-overlap safety spectrum visualizations.
 
-![Figure 14: Production Streamlit Web Dashboard: Executive Portfolio Overview](figures/fig14_executive_overview.png)
+![Figure 15: Production Streamlit Web Dashboard: Executive Portfolio Overview](figures/fig15_executive_overview.png)
 
-*Figure 14: Production Streamlit executive portfolio monitoring dashboard with real-time KPI metrics and multi-model benchmark comparisons.*
+*Figure 15: Production Streamlit executive portfolio monitoring dashboard with real-time KPI metrics and multi-model benchmark comparisons.*
 
 #### C.2 Live Underwriting & Prediction Decision Engine
-![Figure 15: Production Streamlit Web Dashboard: Live Underwriting Prediction Interface](figures/fig15_live_prediction.png)
+![Figure 16: Production Streamlit Web Dashboard: Live Underwriting Prediction Interface](figures/fig16_live_prediction.png)
 
-*Figure 15: Production Streamlit live credit application decision engine displaying instant risk scoring, tier categorization, and SHAP explainability breakdowns.*
+*Figure 16: Production Streamlit live credit application decision engine displaying instant risk scoring, tier categorization, and SHAP explainability breakdowns.*
 
 The complete code, serialized model artifacts, and live dashboard are publicly accessible via the research project GitHub repository:  
 **Repository:** `https://github.com/vimal-kansotia/loan-credit-risk-prediction`

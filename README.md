@@ -2,6 +2,7 @@
 ### A Large-Scale (100,000 Loans, 26 Features) Decision Support System with Explainable AI (SHAP)
 
 **Candidate:** Vimal Kansotia (UID: `2509038`)  
+**Institution:** St. Xavier's College (Autonomous), Mumbai  
 **Program / Degree:** MSc Big Data Analytics  
 **Faculty Advisor:** Prof. Ameya Chitnis  
 **Course:** Research Project (RP) - Financial Machine Learning  
@@ -20,7 +21,7 @@
   2. `lending_club_loan_prediction.ipynb`: Complete, pre-executed research notebook ready for Google Colab.
   3. `app.py`: Multi-report interactive Streamlit dashboard with real-time risk underwriting engine and Plotly charts.
   4. `credit_risk_model.joblib`: Serialized LightGBM pipeline artifact for sub-second inference.
-  5. [`RESEARCH_PROJECT_REPORT.md`](RESEARCH_PROJECT_REPORT.md): Official Research Project Report with all 15 embedded figures and tables.
+  5. [`RESEARCH_PROJECT_REPORT.md`](RESEARCH_PROJECT_REPORT.md): Official Research Project Report with all 16 embedded figures and 12 tables. Also available in ready-to-print formats: [`RESEARCH_PROJECT_REPORT.pdf`](RESEARCH_PROJECT_REPORT.pdf) and [`RESEARCH_PROJECT_REPORT.docx`](RESEARCH_PROJECT_REPORT.docx).
 
 ---
 

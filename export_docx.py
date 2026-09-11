@@ -158,12 +158,20 @@ def create_report_docx():
             h = doc.add_heading(level=1)
             if is_cover:
                 h.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                if "M.Sc" in heading_text:
+                if "XAVIER" in heading_text.upper() or "INSTITUTION" in heading_text.upper():
                     h.paragraph_format.space_before = Pt(30)
+                    h.paragraph_format.space_after = Pt(6)
+                    r = h.add_run(heading_text)
+                    r.font.name = 'Calibri'
+                    r.font.size = Pt(17)
+                    r.font.bold = True
+                    r.font.color.rgb = RGBColor(15, 23, 42)
+                elif "M.Sc" in heading_text:
+                    h.paragraph_format.space_before = Pt(10)
                     h.paragraph_format.space_after = Pt(4)
                     r = h.add_run(heading_text)
                     r.font.name = 'Calibri'
-                    r.font.size = Pt(20)
+                    r.font.size = Pt(19)
                     r.font.bold = True
                     r.font.color.rgb = RGBColor(15, 23, 42)
                 else:
@@ -186,13 +194,23 @@ def create_report_docx():
         elif stripped.startswith('## '):
             heading_text = stripped[3:].strip()
             h = doc.add_heading(level=2)
-            h.paragraph_format.space_before = Pt(12)
-            h.paragraph_format.space_after = Pt(4)
-            r = h.add_run(heading_text)
-            r.font.name = 'Calibri'
-            r.font.size = Pt(14)
-            r.font.bold = True
-            r.font.color.rgb = RGBColor(30, 58, 138)
+            if is_cover:
+                h.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                h.paragraph_format.space_before = Pt(4)
+                h.paragraph_format.space_after = Pt(4)
+                r = h.add_run(heading_text)
+                r.font.name = 'Calibri'
+                r.font.size = Pt(18)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(15, 23, 42)
+            else:
+                h.paragraph_format.space_before = Pt(12)
+                h.paragraph_format.space_after = Pt(4)
+                r = h.add_run(heading_text)
+                r.font.name = 'Calibri'
+                r.font.size = Pt(14)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(30, 58, 138)
 
         elif stripped.startswith('### '):
             heading_text = stripped[4:].strip()

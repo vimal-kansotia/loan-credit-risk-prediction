@@ -13,6 +13,7 @@ def convert_report_to_pdf():
     # Custom HTML for the executive cover page
     cover_html = """
     <div class="cover-container">
+        <div class="cover-inst">ST. XAVIER'S COLLEGE, MUMBAI</div>
         <div class="cover-header">M.Sc BIG DATA ANALYTICS</div>
         <div class="cover-sub">Research Project Report</div>
         <div class="cover-line"></div>
@@ -49,8 +50,8 @@ def convert_report_to_pdf():
     body_md = body_md.replace('\\newpage', '<div style="page-break-before: always;"></div>')
     # Replace math blocks with clean formatted divs
     body_md = re.sub(r'\$\$(.*?)\$\$', r'<div class="equation">\1</div>', body_md, flags=re.DOTALL)
-    # Clean up single inline dollar signs inside text like \tau = 0.36
-    body_md = re.sub(r'\$(.*?)\$', r'<i>\1</i>', body_md)
+    # Only replace single variable inline math (e.g. $y$, $x$) avoiding currency amounts like $15,000 or $142.5 Million
+    body_md = re.sub(r'\$([a-zA-Z_][a-zA-Z0-9_\^= ,]*?)\$', r'<i>\1</i>', body_md)
 
     body_html = markdown.markdown(body_md, extensions=['tables', 'fenced_code'])
 
@@ -76,6 +77,14 @@ def convert_report_to_pdf():
         .cover-container {
             text-align: center;
             padding-top: 20px;
+        }
+        .cover-inst {
+            font-size: 15pt;
+            font-weight: bold;
+            color: #0f172a;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
         .cover-header {
             font-size: 18pt;
@@ -244,12 +253,6 @@ def convert_report_to_pdf():
         print("PDF conversion completed with errors.")
     else:
         print("RESEARCH_PROJECT_REPORT.pdf generated successfully!")
-
-    cover_single = cover_html.replace('<div style="page-break-before: always;"></div>', '')
-    standalone_cover_html = f"<!DOCTYPE html><html><head><meta charset='utf-8'>{custom_css}</head><body>{cover_single}</body></html>"
-    with open('RESEARCH_PROJECT_COVER_PAGE.pdf', 'wb') as cov_file:
-        pisa.CreatePDF(standalone_cover_html, dest=cov_file)
-    print("RESEARCH_PROJECT_COVER_PAGE.pdf generated successfully!")
 
 if __name__ == '__main__':
     convert_report_to_pdf()

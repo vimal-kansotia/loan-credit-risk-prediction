@@ -17,4 +17,3 @@ scratch/
 *.log
 catboost_info/
 .local_backup/
-RESEARCH_PROJECT_REPORT.pdf
